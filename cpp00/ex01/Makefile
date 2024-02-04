@@ -6,13 +6,13 @@
 #    By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:08:31 by sacorder          #+#    #+#              #
-#    Updated: 2024/02/04 18:00:53 by sacorder         ###   ########.fr        #
+#    Updated: 2024/02/04 20:36:17 by sacorder         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = phonebook
 CC = c++
-CPPFLAGS = -Wall -Wextra -Werror -O3
+CPPFLAGS = -Wall -Wextra -Werror -O3 -std=c++98
 #LDFLAGS =
 SRC =	megaphone.cpp
 OBJ = $(SRC:.cpp=.o)
