@@ -6,13 +6,13 @@
 #    By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:08:31 by sacorder          #+#    #+#              #
-#    Updated: 2024/02/04 17:15:37 by sacorder         ###   ########.fr        #
+#    Updated: 2024/02/04 17:22:07 by sacorder         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = megaphone
 CC = c++
-CPPFLAGS = -Wall -Wextra -Werror -O3 -Iinc -Ilibft
+CPPFLAGS = -Wall -Wextra -Werror -O3
 #LDFLAGS =
 SRC =	megaphone.cpp
 OBJ = $(SRC:.cpp=.o)
