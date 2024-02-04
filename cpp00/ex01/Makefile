@@ -6,11 +6,11 @@
 #    By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:08:31 by sacorder          #+#    #+#              #
-#    Updated: 2024/02/04 18:01:13 by sacorder         ###   ########.fr        #
+#    Updated: 2024/02/04 18:00:53 by sacorder         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = phonebook
 CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -O3
 #LDFLAGS =
