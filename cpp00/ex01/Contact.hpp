@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:50:22 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/05 15:17:27 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/05 23:33:13 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,16 @@ class Contact {
 	public:
 		Contact();
 		~Contact();
-		void	setName(std::string name);
-		void	setLastName(std::string last_name);
-		void	setNick(std::string nick);
-		void	setPhone(std::string phone);
-		void	setSecret(std::string secret);
+		void		setName(std::string name);
+		void		setLastName(std::string last_name);
+		void		setNick(std::string nick);
+		void		setPhone(std::string phone);
+		void		setSecret(std::string secret);
+		std::string	getName();
+		std::string	getLastName();
+		std::string	getNick();
+		std::string	getPhone();
+		std::string	getSecret();
 };
 
 #endif /* __CONTACT_H__ */

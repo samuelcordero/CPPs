@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:50:17 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/05 15:29:05 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/05 23:24:48 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class PhoneBook {
 	private:
 		Contact 		pb_arr[8];
 		unsigned int	index;
+		void	printContacts();
 	public:
 		PhoneBook();
 		~PhoneBook();

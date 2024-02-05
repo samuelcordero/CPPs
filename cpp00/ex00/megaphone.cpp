@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 17:15:57 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/05 15:11:56 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/05 23:01:14 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ std::string	toUpperString(char *cstr) {
 
 int	main(int argc, char **argv) {
 	if (argc == 1) {
-		std::cout << "LOUD AND UNBEARABLE FEEDBACK NOISE" << std::endl;
+		std::cout << "LOUD AND UNBEARABLE FEEDBACK NOISE\n";
 		return (0);
 	}
 	for (int i = 1; i < argc; ++i)

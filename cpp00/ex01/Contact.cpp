@@ -6,11 +6,12 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:50:25 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/05 15:02:26 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/05 23:33:15 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
+#include <iostream>
 
 Contact::Contact(){}
 
@@ -34,4 +35,24 @@ void	Contact::setPhone(std::string phone) {
 
 void	Contact::setSecret(std::string secret) {
 	this->darkest_secret = secret;
+}
+
+std::string	Contact::getName() {
+	return (first_name);
+}
+
+std::string	Contact::getLastName() {
+	return (last_name);
+}
+
+std::string	Contact::getNick() {
+	return (nickname);
+}
+
+std::string	Contact::getPhone() {
+	return (phone);
+}
+
+std::string	Contact::getSecret() {
+	return (darkest_secret);
 }
