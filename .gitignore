@@ -2,3 +2,4 @@
 *.a
 .DS_*
 .vscode
+*.log
