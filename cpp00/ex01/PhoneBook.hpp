@@ -6,7 +6,24 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:50:17 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/04 20:50:18 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/05 15:29:05 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+# ifndef __PHONEBOOK_H__
+#  define __PHONEBOOK_H__
+#  include "Contact.hpp"
+
+class PhoneBook {
+	private:
+		Contact 		pb_arr[8];
+		unsigned int	index;
+	public:
+		PhoneBook();
+		~PhoneBook();
+		void	addContact();
+		void	searchContact();
+};
+
+#endif /* __PHONEBOOK_H__ */
