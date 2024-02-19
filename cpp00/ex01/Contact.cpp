@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:50:25 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/05 23:33:15 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/19 10:28:53 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,13 @@ std::string	Contact::getPhone() {
 
 std::string	Contact::getSecret() {
 	return (darkest_secret);
+}
+
+void	Contact::printInfo() {
+	std::cout << std::endl;
+	std::cout << "Name : " << this->first_name << std::endl;
+	std::cout << "Last name : " << this->last_name << std::endl;
+	std::cout << "Nickname : " << this->nickname << std::endl;
+	std::cout << "Phone : " << this->phone << std::endl;
+	std::cout << "Darkest secret : " << this->darkest_secret << std::endl;
 }

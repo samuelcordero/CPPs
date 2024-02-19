@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:50:27 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/05 23:17:41 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/19 10:25:25 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	main(int argc, char **argv) {
 		else
 			std::cout << "Invalid command\n";
 		if (std::cin.eof())
-			std::cerr << "PhoneBook: cin error: eof: Exiting.\n";
+			std::cerr << "\nPhoneBook: cin error: eof: Exiting.\n";
 	}
 	
 	return (0);

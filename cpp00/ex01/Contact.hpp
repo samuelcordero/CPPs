@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:50:22 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/05 23:33:13 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/19 10:16:45 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class Contact {
 		std::string	getNick();
 		std::string	getPhone();
 		std::string	getSecret();
+		void		printInfo();
 };
 
 #endif /* __CONTACT_H__ */

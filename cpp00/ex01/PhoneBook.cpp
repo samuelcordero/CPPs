@@ -6,12 +6,13 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:50:21 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/05 23:36:48 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/19 10:52:32 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include <iostream>
+#include <iomanip>
 
 PhoneBook::PhoneBook() {
 	index = 0;
@@ -20,9 +21,23 @@ PhoneBook::PhoneBook() {
 PhoneBook::~PhoneBook() {}
 
 void	PhoneBook::printContacts() {
-	std::cout << "Index | First name | Last name | Nickname\n";
+	std::string	tmp;
+	std::cout << std::setw(10) << "Index" << "|" << std::setw(10) << "First name" << "|" << std::setw(10) << "Last name" << "|" << std::setw(10) << "Nickname" << std::endl;
 	for (unsigned int i = 0; i < 8 && i < index; ++i) {
-		std::cout << i << "|" << pb_arr[i].getName() << "|" << pb_arr[i].getLastName() << "|" << pb_arr[i].getNick() << std::endl;
+		std::cout<< std::setw(10) << i << "|";
+		tmp = pb_arr[i].getName();
+		if (tmp.length() >= 10)
+			tmp = tmp.substr(0, 9) + ".";
+		std::cout<< std::setw(10) << tmp << "|";
+		tmp = pb_arr[i].getLastName();
+		if (tmp.length() >= 10)
+			tmp = tmp.substr(0, 9) + ".";
+		std::cout<< std::setw(10) << tmp << "|";
+		tmp = pb_arr[i].getNick();
+		if (tmp.length() >= 10)
+			tmp = tmp.substr(0, 9) + ".";
+		std::cout<< std::setw(10) << tmp;
+		std::cout << std::endl;
 	}
 }
 
@@ -60,5 +75,17 @@ void	PhoneBook::addContact() {
 }
 
 void	PhoneBook::searchContact() {
+	unsigned int	i;
+
 	printContacts();
+	std::cout << "Please, enter a profile index to print contact information: ";
+	std::cin >> i;
+	while ((i >= 8 || i >= this->index) && !std::cin.fail() && this->index > 0) {
+		std::cout << "Invalid index, please try again: ";
+		std::cin >> i;
+	}
+	if (std::cin.fail())
+		return ;
+	if (i < index)
+		pb_arr[i].printInfo();
 }
