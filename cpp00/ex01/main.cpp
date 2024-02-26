@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:50:27 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/19 10:25:25 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/26 13:08:03 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,10 @@ int	main(int argc, char **argv) {
 		std::cerr << "PhoneBook: invalid args\n";
 		return (1);
 	}
-
+	
 	while (!std::cin.fail())	{
 		std::cout << "\nPlease enter a command (ADD, SEARCH, EXIT):\n";
-		std::cin >> input;
-		
+		getline(std::cin, input);
 		toUpper(input);
 		if (input == "ADD")
 			phone_book.addContact();
@@ -47,6 +46,5 @@ int	main(int argc, char **argv) {
 		if (std::cin.eof())
 			std::cerr << "\nPhoneBook: cin error: eof: Exiting.\n";
 	}
-	
 	return (0);
 }

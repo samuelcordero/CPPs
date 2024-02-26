@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:50:21 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/26 12:31:04 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/26 13:00:21 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,23 +46,23 @@ void	PhoneBook::addContact() {
 
 	while (!std::cin.fail() && tmp[0].length() == 0) {
 		std::cout << "Enter first name: ";
-		std::cin >> tmp[0];
+		getline(std::cin, tmp[0]);
 	}
 	while (!std::cin.fail() && tmp[1].length() == 0) {
 		std::cout << "Enter last name: ";
-		std::cin >> tmp[1];
+		getline(std::cin, tmp[1]);
 	}
 	while (!std::cin.fail() && tmp[2].length() == 0) {
 		std::cout << "Enter nick name: ";
-		std::cin >> tmp[2];
+		getline(std::cin, tmp[2]);
 	}
 	while (!std::cin.fail() && tmp[3].length() == 0) {
 		std::cout << "Enter phone number: ";
-		std::cin >> tmp[3];
+		getline(std::cin, tmp[3]);
 	}
 	while (!std::cin.fail() && tmp[4].length() == 0) {
 		std::cout << "Enter darkest secret: ";
-		std::cin >> tmp[4];
+		getline(std::cin, tmp[4]);
 	}
 	if (std::cin.eof())
 		return ;
@@ -75,14 +75,17 @@ void	PhoneBook::addContact() {
 }
 
 void	PhoneBook::searchContact() {
-	unsigned int	i;
+	std::string		nbr_str;
+	unsigned long	i;
 
 	printContacts();
 	std::cout << "Please, enter a profile index to print contact information: ";
-	std::cin >> i;
+	getline(std::cin, nbr_str);
+	i = std::stoul(nbr_str);
 	while ((i >= 8 || i >= this->index) && !std::cin.fail() && this->index > 0) {
 		std::cout << "Invalid index, please try again: ";
-		std::cin >> i;
+		getline(std::cin, nbr_str);
+		i = std::stoul(nbr_str);
 	}
 	if (std::cin.fail())
 		return ;
