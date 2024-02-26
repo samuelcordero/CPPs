@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:50:21 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/19 10:52:32 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/26 12:31:04 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,19 @@ void	PhoneBook::printContacts() {
 	std::string	tmp;
 	std::cout << std::setw(10) << "Index" << "|" << std::setw(10) << "First name" << "|" << std::setw(10) << "Last name" << "|" << std::setw(10) << "Nickname" << std::endl;
 	for (unsigned int i = 0; i < 8 && i < index; ++i) {
-		std::cout<< std::setw(10) << i << "|";
+		std::cout << std::setw(10) << i << "|";
 		tmp = pb_arr[i].getName();
 		if (tmp.length() >= 10)
 			tmp = tmp.substr(0, 9) + ".";
-		std::cout<< std::setw(10) << tmp << "|";
+		std::cout << std::setw(10) << tmp << "|";
 		tmp = pb_arr[i].getLastName();
 		if (tmp.length() >= 10)
 			tmp = tmp.substr(0, 9) + ".";
-		std::cout<< std::setw(10) << tmp << "|";
+		std::cout << std::setw(10) << tmp << "|";
 		tmp = pb_arr[i].getNick();
 		if (tmp.length() >= 10)
 			tmp = tmp.substr(0, 9) + ".";
-		std::cout<< std::setw(10) << tmp;
+		std::cout << std::setw(10) << tmp;
 		std::cout << std::endl;
 	}
 }
