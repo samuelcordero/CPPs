@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:50:21 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/26 13:00:21 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/27 13:51:23 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,16 +79,34 @@ void	PhoneBook::searchContact() {
 	unsigned long	i;
 
 	printContacts();
+	i = 8;
 	std::cout << "Please, enter a profile index to print contact information: ";
 	getline(std::cin, nbr_str);
-	i = std::stoul(nbr_str);
+	if (nbr_str.length() != 0 && !std::cin.fail()) {
+		try {
+				i = std::stoul(nbr_str);
+		}
+		catch (std::invalid_argument) {
+				std::cout << "Invalid argument, only numeric indexes allowed!\n";
+				i = 8;
+		}
+	}
 	while ((i >= 8 || i >= this->index) && !std::cin.fail() && this->index > 0) {
 		std::cout << "Invalid index, please try again: ";
 		getline(std::cin, nbr_str);
-		i = std::stoul(nbr_str);
+		if (nbr_str.length() > 0 && !std::cin.fail())
+		{
+			try {
+				i = std::stoul(nbr_str);
+			}
+			catch (std::invalid_argument) {
+				std::cout << "Invalid argument, only numeric indexes allowed!\n";
+				i = 8;
+			}
+		}
 	}
 	if (std::cin.fail())
 		return ;
-	if (i < index)
+	if (i < this->index)
 		pb_arr[i].printInfo();
 }
