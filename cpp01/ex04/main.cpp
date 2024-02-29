@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 18:36:14 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/29 19:03:42 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/29 19:05:45 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,13 @@ int	main(int argc, char **argv) {
 	to_find = std::string(argv[2]);
 	to_replace = std::string(argv[3]);
 	
-	while (getline(infile, tmp) && !outfile.fail() && !infile.fail()) {
+	while (getline(infile, tmp) && !infile.fail() && !outfile.fail()) {
 		pos = tmp.find(to_find);
 		while (pos != std::string::npos) {
 			tmp = tmp.substr(0, pos) + to_replace + tmp.substr(pos + to_find.length());
 			pos = tmp.find(to_find, pos + to_replace.length());
 		}
 		outfile << tmp << std::endl;
-
 	}
 
 	infile.close();
