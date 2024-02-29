@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 12:58:05 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/29 13:36:07 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/02/29 13:44:44 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	HumanB::attack(void) {
 	if (weapon)
 		std::cout << name << " attacks with their " << weapon->getType() << "\n";
 	else
-		std::cout << name << " attack with his empty hands\n";
+		std::cout << name << " attacks with their empty hands\n";
 }
 
 void	HumanB::setWeapon(Weapon &weapon) {
