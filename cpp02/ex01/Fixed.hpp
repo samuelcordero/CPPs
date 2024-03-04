@@ -6,13 +6,14 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 12:29:38 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/04 12:38:30 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/03/04 16:33:35 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __FIXED_H__
-# define __FIXED_H__
-# include <iostream>
+#pragma once
+# ifndef __FIXED_H__
+#  define __FIXED_H__
+#  include <iostream>
 
 class Fixed {
 	private:

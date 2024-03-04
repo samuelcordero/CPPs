@@ -6,11 +6,11 @@
 #    By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:08:31 by sacorder          #+#    #+#              #
-#    Updated: 2024/03/01 12:53:15 by sacorder         ###   ########.fr        #
+#    Updated: 2024/03/04 16:30:00 by sacorder         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = fp2
+NAME = bsp
 CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -O3 -std=c++98
 LDFLAGS = -I .

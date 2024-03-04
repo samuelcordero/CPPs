@@ -6,13 +6,14 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 12:29:38 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/04 13:45:42 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/03/04 16:36:56 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __FIXED_H__
-# define __FIXED_H__
-# include <iostream>
+#pragma once
+# ifndef __FIXED_H__
+#  define __FIXED_H__
+#  include <iostream>
 
 class Fixed {
 	private:
@@ -34,6 +35,13 @@ class Fixed {
 		Fixed	&operator--();
 		Fixed	operator++(int);
 		Fixed	operator--(int);
+
+		bool	operator>(const Fixed &f) const;
+		bool	operator<(const Fixed &f) const;
+		bool	operator<=(const Fixed &f) const;
+		bool	operator>=(const Fixed &f) const;
+		bool	operator==(const Fixed &f) const;
+		bool	operator!=(const Fixed &f) const;
 
 		static Fixed		&min(Fixed &a, Fixed &b);
 		static const Fixed	&min(const Fixed &a, const Fixed &b);
