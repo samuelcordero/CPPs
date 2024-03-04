@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 12:33:40 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/04 13:33:52 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/03/04 16:21:56 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,26 +57,26 @@ Fixed	Fixed::operator-(const Fixed &f) const {
 }
 
 Fixed	Fixed::operator*(const Fixed &f) const {
-	Fixed	res;
+	Fixed		res;
 	
-	res.value = this->value * f.value;
+	res.value = (this->value * f.value) >> fract_bits;
 	return (res);
 }
 
 Fixed	Fixed::operator/(const Fixed &f) const {
-	Fixed	res;
+	Fixed		res;
 	
-	res.value = this->value / f.value;
+	res.value = (this->value << fract_bits) / f.value;
 	return (res);
 }
 
 Fixed	&Fixed::operator++() {
-	++this->value;
+	this->value += 0b1 << fract_bits;
 	return (*this);
 }
 
 Fixed	&Fixed::operator--() {
-	--this->value;
+	this->value -= 0b1 << fract_bits;
 	return (*this);
 }
 
@@ -135,7 +135,7 @@ float	Fixed::toFloat(void) const {
 }
 
 std::ostream	&operator<<(std::ostream &out, const Fixed &f) {
-	//std::cout << "Out stream operator for Fixed object called\n";
+	//std::cout << "\nOut stream operator for Fixed object called\n";
 	out << f.toFloat();
 	return (out);
 }
