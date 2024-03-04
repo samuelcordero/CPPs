@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 12:29:38 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/04 12:38:30 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/03/04 13:26:15 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,24 @@ class Fixed {
 		~Fixed();
 
 		Fixed	&operator=(const Fixed &f);
+		Fixed	operator+(const Fixed &f) const;
+		Fixed	operator-(const Fixed &f) const;
+		Fixed	operator*(const Fixed &f) const;
+		Fixed	operator/(const Fixed &f) const;
+		Fixed	&operator++();
+		Fixed	&operator--();
+		Fixed	operator++(int);
+		Fixed	operator--(int);
+
+
+		static Fixed		&min(Fixed &a, Fixed &b);
+		static const Fixed	&min(const Fixed &a, const Fixed &b);
+		static Fixed		&max(Fixed &a, Fixed &b);
+		static const Fixed	&max(const Fixed &a, const Fixed &b);
+
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
+
 		int		toInt(void) const;
 		float	toFloat(void) const;
 };

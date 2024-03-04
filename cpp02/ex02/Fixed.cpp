@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 12:33:40 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/04 12:47:33 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/03/04 13:33:52 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,84 @@ Fixed::~Fixed() {
 	std::cout << "Destructor Fixed called\n";
 }
 
-Fixed &Fixed::operator=(const Fixed &f) {
+Fixed	&Fixed::operator=(const Fixed &f) {
 	std::cout << "Copy operator for Fixed object called\n";
 	this->value = f.value;
 	return (*this);
+}
+
+Fixed	Fixed::operator+(const Fixed &f) const {
+	Fixed	res;
+	
+	res.value = this->value + f.value;
+	return (res);
+}
+
+Fixed	Fixed::operator-(const Fixed &f) const {
+	Fixed	res;
+	
+	res.value = this->value - f.value;
+	return (res);
+}
+
+Fixed	Fixed::operator*(const Fixed &f) const {
+	Fixed	res;
+	
+	res.value = this->value * f.value;
+	return (res);
+}
+
+Fixed	Fixed::operator/(const Fixed &f) const {
+	Fixed	res;
+	
+	res.value = this->value / f.value;
+	return (res);
+}
+
+Fixed	&Fixed::operator++() {
+	++this->value;
+	return (*this);
+}
+
+Fixed	&Fixed::operator--() {
+	--this->value;
+	return (*this);
+}
+
+Fixed	Fixed::operator++(int) {
+	Fixed	tmp = *this;
+	++(*this);
+	return (tmp);
+}
+
+Fixed	Fixed::operator--(int) {
+	Fixed	tmp = *this;
+	--(*this);
+	return (tmp);
+}
+
+Fixed	&Fixed::min(Fixed &a, Fixed &b) {
+	if (a.toFloat() < b.toFloat())
+		return (a);
+	return (b);
+}
+
+const Fixed	&Fixed::min(const Fixed &a, const Fixed &b) {
+	if (a.toFloat() < b.toFloat())
+		return (a);
+	return (b);
+}
+
+Fixed	&Fixed::max(Fixed &a, Fixed &b) {
+	if (a.toFloat() > b.toFloat())
+		return (a);
+	return (b);
+}
+
+const Fixed	&Fixed::max(const Fixed &a, const Fixed &b) {
+	if (a.toFloat() > b.toFloat())
+		return (a);
+	return (b);
 }
 
 int	Fixed::getRawBits(void) const {
