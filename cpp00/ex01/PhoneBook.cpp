@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 20:50:21 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/27 13:51:23 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/03/08 12:58:53 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,11 +84,15 @@ void	PhoneBook::searchContact() {
 	getline(std::cin, nbr_str);
 	if (nbr_str.length() != 0 && !std::cin.fail()) {
 		try {
-				i = std::stoul(nbr_str);
+			i = std::stoul(nbr_str);
 		}
 		catch (std::invalid_argument) {
-				std::cout << "Invalid argument, only numeric indexes allowed!\n";
-				i = 8;
+			std::cout << "Invalid argument, only numeric indexes allowed!\n";
+			i = 8;
+		}
+		catch (std::out_of_range) {
+			std::cout << "Invalid argument, out of range for stoul!\n";
+			i = 8;
 		}
 	}
 	while ((i >= 8 || i >= this->index) && !std::cin.fail() && this->index > 0) {
@@ -101,6 +105,10 @@ void	PhoneBook::searchContact() {
 			}
 			catch (std::invalid_argument) {
 				std::cout << "Invalid argument, only numeric indexes allowed!\n";
+				i = 8;
+			}
+			catch (std::out_of_range) {
+				std::cout << "Invalid argument, out of range for stoul!\n";
 				i = 8;
 			}
 		}
