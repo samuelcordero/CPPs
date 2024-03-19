@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 12:12:58 by sacorder          #+#    #+#             */
-/*   Updated: 2024/02/29 12:42:29 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/03/19 13:37:14 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class Zombie {
 		~Zombie(void);
 
 		void	announce(void);
+		void	setName(const std::string name);
 };
 
 Zombie*	zombieHorde(int N, std::string name);
