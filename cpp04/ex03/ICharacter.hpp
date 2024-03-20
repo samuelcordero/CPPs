@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/20 15:23:05 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/20 15:25:57 by sacorder         ###   ########.fr       */
+/*   Created: 2024/03/20 15:28:04 by sacorder          #+#    #+#             */
+/*   Updated: 2024/03/20 15:29:40 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-# ifndef __CURE_H__
-#  define __CURE_H__
+# ifndef __ICHARACTER_H__
+#  define __ICHARACTER_H__
 #  include "AMateria.hpp"
 
-class Cure: public AMateria {
-	private:
-		/* data */
+class ICharacter {
 	public:
-		Cure();
-		~Cure();
+		virtual ~ICharacter() {}
+		virtual std::string const	&getName() const = 0;
+		virtual void				equip(AMateria* m) = 0;
+		virtual void				unequip(int idx) = 0;
+		virtual void				use(int idx, ICharacter& target) = 0;
 };
 
 #endif

@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cure.hpp                                           :+:      :+:    :+:   */
+/*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/20 15:23:05 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/20 15:25:57 by sacorder         ###   ########.fr       */
+/*   Created: 2024/03/20 15:30:38 by sacorder          #+#    #+#             */
+/*   Updated: 2024/03/20 15:32:20 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-# ifndef __CURE_H__
-#  define __CURE_H__
-#  include "AMateria.hpp"
+# ifndef __CHARACTER_H__
+#  define __CHARACTER_H__
 
-class Cure: public AMateria {
+#  include "ICharacter.hpp"
+
+#  include "AMateria.hpp"
+#  include "Cure.hpp"
+#  include "Ice.hpp"
+
+class Character: public ICharacter{
 	private:
 		/* data */
 	public:
-		Cure();
-		~Cure();
+		Character(/* args */);
+		~Character();
 };
 
 #endif
