@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:46:49 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/18 12:30:47 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/03/20 15:16:22 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,25 +24,25 @@ int	main(int argc, char **argv) {
 		return (1);
 	}
 
-	Animal	animal;
-	Cat		cat;
-	Dog		dog;
+	Animal	*cat = new Cat();
+	Animal	*dog = new Dog();
 
-	animal.makeSound();
-	animal.printType();
-	cat.makeSound();
-	cat.printType();
-	dog.makeSound();
-	dog.printType();
-
-	wrongAnimal	wanimal;
-	wrongCat	wcat;
+	cat->makeSound();
+	cat->printType();
+	dog->makeSound();
+	dog->printType();
+	
+	delete cat;
+	delete dog;
 
 	std::cout << "\nWrong animals tests:\n\n";
-	wanimal.makeSound();
-	wanimal.printType();
-	wcat.makeSound();
-	wcat.printType();
+
+	wrongCat	*wcat = new wrongCat();
+
+	wcat->makeSound();
+	wcat->printType();
+	
+	delete wcat;
 
 	return (0);
 }
