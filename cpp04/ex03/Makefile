@@ -6,19 +6,18 @@
 #    By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:08:31 by sacorder          #+#    #+#              #
-#    Updated: 2024/03/18 13:10:45 by sacorder         ###   ########.fr        #
+#    Updated: 2024/03/18 13:22:58 by sacorder         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ideas
+NAME = interface
 CC = c++
-CPPFLAGS = -Wall -Wextra -Werror -O3 -std=c++98 -g3 #-fsanitize=address
+CPPFLAGS = -Wall -Wextra -Werror -O3 -std=c++98 #-g3 #-fsanitize=address
 LDFLAGS = -I .
 SRC =	main.cpp \
-		Animal.cpp \
-		Dog.cpp \
-		Cat.cpp \
-		Brain.cpp
+		Ice.cpp \
+		Cure.cpp \
+		AMateria.cpp
 OBJ = $(SRC:.cpp=.o)
 
 .PHONY: all clean fclean re

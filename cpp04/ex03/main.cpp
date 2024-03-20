@@ -5,39 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 12:46:49 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/20 15:09:52 by sacorder         ###   ########.fr       */
+/*   Created: 2024/03/18 13:20:29 by sacorder          #+#    #+#             */
+/*   Updated: 2024/03/18 13:21:17 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
-const size_t	arr_size = 4;
+int main() {
+	IMateriaSource* src = new MateriaSource();
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
 
-int	main(int argc, char **argv) {
-	(void)argv;
-	if (argc > 1) {
-		std::cerr << "Invalid args!\n";
-		return (1);
-	}
+	ICharacter* me = new Character("me");
 
-	Animal *an_arr[arr_size];
-	size_t i = 0;
-	for (i = 0; i < arr_size / 2; ++i)
-		an_arr[i] = new Dog;
+	AMateria* tmp;
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
+
+	ICharacter* bob = new Character("bob");
+
+	me->use(0, *bob);
+	me->use(1, *bob);
 	
-	for (; i < arr_size; ++i)
-		an_arr[i] = new Cat;
+	delete bob;
+	delete me;
+	delete src;
 
-	for (i = 0; i < arr_size; ++i) {
-		an_arr[i]->makeSound();
-		an_arr[i]->getType();
-	}
-
-	for (i = 0; i < arr_size; ++i)
-		delete an_arr[i];
-	
-	return (0);
+	return 0;
 }
