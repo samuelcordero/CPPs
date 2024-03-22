@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/01 12:41:30 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/04 16:49:48 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/03/22 12:45:00 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,11 @@ int main(void) {
 	std::cout << "Using preinc in a: " << ++a << std::endl;
 	std::cout << "Using postdec in a: " << a-- <<std::endl;;
 	std::cout << "Using postinc in a: " << a++ << std::endl;
-	std::cout << "Value of a + c " << a + c << std::endl;
 	std::cout << "Value of d is " << d << std::endl;
+	std::cout << "Value of a + c " << a + c << std::endl;
+	std::cout << "Value of a / c " << a / c << std::endl;
+	std::cout << "Value of a * c " << a * c << std::endl;
+	std::cout << "Value of a - c " << a - c << std::endl;
 
 	if (d > c)
 		std::cout << "d is greater than c\n";
