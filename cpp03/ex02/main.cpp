@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:46:49 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/14 13:22:06 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/03/27 13:49:56 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,35 +21,15 @@ int	main(int argc, char **argv) {
 		return (1);
 	}
 
-	ClapTrap ct;
-	ClapTrap ct2("Manolo");
-	ScavTrap st;
-	ScavTrap st2("Juan");
 	FragTrap ft;
 	FragTrap ft2("Ana");
 	FragTrap ft3(ft2);
 
-
-	ct.attack("Paquito");
-	st.attack("Juanito");
 	ft.attack("Sofia");
-	ct2.attack("Alfonso");
-	st2.attack("Joe");
 	ft2.attack("Arnold");
 	ft3.attack("Ronaldinho");
 
-	st.guardGate();
-
-	st2 = st;
-	st2.guardGate();
-
-	ft.guardGate();
-
 	ft2 = ft;
-	ft2.guardGate();
-
-	ft3.guardGate();
-	ft3.guardGate();
 
 	ft.takeDamage(1);
 	ft2.takeDamage(10);

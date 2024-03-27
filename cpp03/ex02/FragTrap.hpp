@@ -6,16 +6,16 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 13:05:18 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/14 13:25:26 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/03/27 13:48:20 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 # ifndef __FRAGTRAP_H__
 #  define __FRAGTRAP_H__
-#  include "ScavTrap.hpp"
+#  include "ClapTrap.hpp"
 
-class FragTrap: public ScavTrap {
+class FragTrap: public ClapTrap {
 	private:
 	
 	public:

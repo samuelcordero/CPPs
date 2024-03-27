@@ -6,33 +6,32 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 13:05:20 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/14 13:31:26 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/03/27 13:52:32 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(): ScavTrap() {
+FragTrap::FragTrap(): ClapTrap() {
 	std::cout << "Default constructor for FragTrap\n";
 	setAttackDamage(30);
 	setEnergyPoints(100);
 	setHitPoints(100);
 }
 
-FragTrap::FragTrap(const std::string name): ScavTrap(name) {
+FragTrap::FragTrap(const std::string name): ClapTrap(name) {
 	std::cout << "Name constructor for FragTrap\n";
 	setAttackDamage(30);
 	setEnergyPoints(100);
 	setHitPoints(100);
 }
 
-FragTrap::FragTrap(const FragTrap &cp): ScavTrap() {
+FragTrap::FragTrap(const FragTrap &cp): ClapTrap() {
 	std::cout << "Copy constructor for FragTrap\n";
 	setAttackDamage(cp.getAttackDamage());
 	setEnergyPoints(cp.getEnergyPoints());
 	setName(cp.getName());
 	setHitPoints(cp.getHitPoints());
-	setGuardMode(cp.getGuardMode());
 }
 
 FragTrap::~FragTrap() { std::cout << "Destructor for FragTrap\n"; }
@@ -44,12 +43,14 @@ FragTrap	&FragTrap::operator=(const FragTrap &cp) {
 	setEnergyPoints(cp.getEnergyPoints());
 	setName(cp.getName());
 	setHitPoints(cp.getHitPoints());
-	setGuardMode(cp.getGuardMode());
 	return (*this);
 }
 
 void	FragTrap::highFiveGuys(void) {
-	std::cout << "High five bros!!!\n";
+	if (getEnergyPoints() && getHitPoints())
+		std::cout << "High five bros!!!\n";
+	else
+		std::cout << "Help me pls >:(\n";
 }
 
 void	FragTrap::attack(const std::string &target) {
