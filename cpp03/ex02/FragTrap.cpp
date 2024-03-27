@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 13:05:20 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/27 13:52:32 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/03/27 16:31:24 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 FragTrap::FragTrap(): ClapTrap() {
 	std::cout << "Default constructor for FragTrap\n";
-	setAttackDamage(30);
-	setEnergyPoints(100);
-	setHitPoints(100);
+	hit_points = 100;
+	energy_points = 100;
+	attack_damage = 30;
 }
 
 FragTrap::FragTrap(const std::string name): ClapTrap(name) {
 	std::cout << "Name constructor for FragTrap\n";
-	setAttackDamage(30);
-	setEnergyPoints(100);
-	setHitPoints(100);
+	hit_points = 100;
+	energy_points = 100;
+	attack_damage = 30;
 }
 
 FragTrap::FragTrap(const FragTrap &cp): ClapTrap() {
 	std::cout << "Copy constructor for FragTrap\n";
-	setAttackDamage(cp.getAttackDamage());
-	setEnergyPoints(cp.getEnergyPoints());
-	setName(cp.getName());
-	setHitPoints(cp.getHitPoints());
+	hit_points = cp.hit_points;
+	energy_points = cp.energy_points;
+	attack_damage = cp.attack_damage;
+	name = cp.name;
 }
 
 FragTrap::~FragTrap() { std::cout << "Destructor for FragTrap\n"; }
@@ -39,26 +39,28 @@ FragTrap::~FragTrap() { std::cout << "Destructor for FragTrap\n"; }
 FragTrap	&FragTrap::operator=(const FragTrap &cp) {
 	if (&cp == this)
 		return (*this);
-	setAttackDamage(cp.getAttackDamage());
-	setEnergyPoints(cp.getEnergyPoints());
-	setName(cp.getName());
-	setHitPoints(cp.getHitPoints());
+	hit_points = cp.hit_points;
+	energy_points = cp.energy_points;
+	attack_damage = cp.attack_damage;
+	name = cp.name;
 	return (*this);
 }
 
 void	FragTrap::highFiveGuys(void) {
-	if (getEnergyPoints() && getHitPoints())
+	if (energy_points > 0 && hit_points > 0) {
 		std::cout << "High five bros!!!\n";
+		--energy_points;
+	}
 	else
 		std::cout << "Help me pls >:(\n";
 }
 
 void	FragTrap::attack(const std::string &target) {
-	if (getEnergyPoints() > 0 && getHitPoints() > 0) {
-		std::cout << "FragTrap " << getName() << " attacks " << target
-			<< ", causing " << getAttackDamage() << " points of damage!\n";
-		setEnergyPoints(getEnergyPoints() - 1);
+	if (energy_points > 0 && hit_points > 0) {
+		std::cout << "FragTrap " << name << " attacks " << target
+			<< ", causing " << attack_damage << " points of damage!\n";
+		energy_points--;
 	} else {
-		std::cout << getName() << " cannot attack!\n";
+		std::cout << name << " cannot attack!\n";
 	}
 }

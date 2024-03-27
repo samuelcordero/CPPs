@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:46:57 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/27 13:54:15 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/03/27 16:28:08 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,36 +75,4 @@ void	ClapTrap::beRepaired(unsigned int amount) {
 	} else {
 		std::cout << name << " cannot be repaired!\n";
 	}
-}
-
-std::string	ClapTrap::getName(void) const {
-	return (name);
-}
-
-int	ClapTrap::getHitPoints(void) const {
-	return (hit_points);
-}
-
-int	ClapTrap::getEnergyPoints(void) const {
-	return (energy_points);
-}
-
-int	ClapTrap::getAttackDamage(void) const {
-	return (attack_damage);
-}
-
-void	ClapTrap::setAttackDamage(int val) {
-	attack_damage = val;
-}
-
-void	ClapTrap::setEnergyPoints(int val) {
-	energy_points = val;
-}
-
-void	ClapTrap::setHitPoints(int val) {
-	hit_points = val;
-}
-
-void ClapTrap::setName(std::string name) {
-	this->name = name;
 }
