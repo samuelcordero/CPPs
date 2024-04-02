@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/14 13:05:20 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/27 16:31:24 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/02 11:46:45 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	FragTrap::attack(const std::string &target) {
 	if (energy_points > 0 && hit_points > 0) {
 		std::cout << "FragTrap " << name << " attacks " << target
 			<< ", causing " << attack_damage << " points of damage!\n";
-		energy_points--;
+		--energy_points;
 	} else {
 		std::cout << name << " cannot attack!\n";
 	}
