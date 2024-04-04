@@ -6,11 +6,11 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:46:49 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/20 15:09:52 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/05 00:39:09 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 
@@ -23,7 +23,7 @@ int	main(int argc, char **argv) {
 		return (1);
 	}
 
-	Animal *an_arr[arr_size];
+	AAnimal *an_arr[arr_size];
 	size_t i = 0;
 	for (i = 0; i < arr_size / 2; ++i)
 		an_arr[i] = new Dog;

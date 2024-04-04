@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,35 +10,35 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-Animal::Animal() {
-	std::cout << "Default cons for Animal\n";
+AAnimal::AAnimal() {
+	std::cout << "Default cons for AAnimal\n";
 	type = "Default type";
 }
 
-Animal::Animal(const Animal &cp) {
-	std::cout << "Copy cons for Animal\n";
+AAnimal::AAnimal(const AAnimal &cp) {
+	std::cout << "Copy cons for AAnimal\n";
 	type = cp.type;
 }
 
-Animal::~Animal() { std::cout << "Animal destructor\n"; }
+AAnimal::~AAnimal() { std::cout << "AAnimal destructor\n"; }
 
-Animal	&Animal::operator=(const Animal &cp) {
+AAnimal	&AAnimal::operator=(const AAnimal &cp) {
 	if (&cp == this)
 		return (*this);
 	type = cp.type;
 	return (*this);
 }
 
-void	Animal::makeSound(void) {
+void	AAnimal::makeSound(void) {
 	std::cout << "Default jungle sounds\n";
 }
 
-void	Animal::printType(void) {
+void	AAnimal::printType(void) {
 	std::cout << "Type is " << type << std::endl;
 }
 
-std::string	Animal::getType(void) {
+std::string	AAnimal::getType(void) {
 	return (type);
 }

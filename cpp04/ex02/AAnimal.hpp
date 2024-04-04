@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -11,20 +11,20 @@
 /* ************************************************************************** */
 
 #pragma once
-# ifndef __ANIMAL_H__
-#  define __ANIMAL_H__
+# ifndef __AANIMAL_H__
+#  define __AANIMAL_H__
 #  include <iostream>
 
-class Animal {
+class AAnimal {
 	protected:
 		std::string	type;
-		Animal();
-		Animal(const Animal &cp);
+		AAnimal();
+		AAnimal(const AAnimal &cp);
 	private:
 		/* private members */
 	public:
-		virtual ~Animal();
-		Animal	&operator=(const Animal &cp);
+		virtual ~AAnimal();
+		AAnimal	&operator=(const AAnimal &cp);
 
 		virtual void		makeSound(void);
 		virtual void		printType(void);
