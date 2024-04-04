@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 15:24:39 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/20 15:25:49 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/05 00:52:33 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ class Ice: public AMateria{
 		/* data */
 	public:
 		Ice();
+		Ice(const Ice &cp);
 		~Ice();
+		
+		Ice	&operator=(const Ice &cp);
 };
 
 #endif

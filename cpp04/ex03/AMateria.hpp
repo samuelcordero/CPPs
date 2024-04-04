@@ -6,14 +6,15 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 15:18:44 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/20 15:22:52 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/05 00:48:12 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #ifndef __AMATERIA_H__
 # define __AMATERIA_H__
-# include <string>
+# include <iostream>
+# include "ICharacter.hpp"
 
 class AMateria {
 	protected:

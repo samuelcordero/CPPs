@@ -1,25 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/05 00:40:56 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/05 00:49:22 by sacorder         ###   ########.fr       */
+/*   Created: 2024/04/05 00:51:02 by sacorder          #+#    #+#             */
+/*   Updated: 2024/04/05 00:54:31 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AMateria.hpp"
+#include "Ice.hpp"
 
-AMateria::AMateria() {
-	std::cout << "Default AMateria cons\n";
-	type = "default";
-}
-
-AMateria::AMateria(std::string const &type) {
-	std::cout << "Type AMateria cons\n";
-	this->type = type;
-}
-
-AMateria::~AMateria() { std::cout << "Default AMateria dest\n"; }
+Ice::Ice(): AMateria("ice") { std::cout << "Default ice cons\n"; }

@@ -6,7 +6,7 @@
 #    By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:08:31 by sacorder          #+#    #+#              #
-#    Updated: 2024/03/18 13:22:58 by sacorder         ###   ########.fr        #
+#    Updated: 2024/04/05 00:45:38 by sacorder         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ LDFLAGS = -I .
 SRC =	main.cpp \
 		Ice.cpp \
 		Cure.cpp \
+		Character.cpp \
 		AMateria.cpp
 OBJ = $(SRC:.cpp=.o)
 
