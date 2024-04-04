@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 15:23:05 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/20 15:25:57 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/05 01:00:45 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@ class Cure: public AMateria {
 		/* data */
 	public:
 		Cure();
+		Cure(const Cure &cp);
 		~Cure();
+
+		Cure	&operator=(const Cure &cp);
+		virtual AMateria*	clone() const override;
 };
 
 #endif

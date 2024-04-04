@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 15:30:38 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/20 15:32:20 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/05 01:10:50 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,16 @@
 
 class Character: public ICharacter{
 	private:
-		/* data */
+		std::string	name;
+		AMateria	*inventory[4];
 	public:
-		Character(/* args */);
+		Character();
+		Character(const std::string &name);
+		Character(const Character &cp);
 		~Character();
+
+		Character	&operator=(const Character &cp);
+
 };
 
 #endif

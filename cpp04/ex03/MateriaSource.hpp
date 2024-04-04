@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/05 00:51:02 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/05 01:03:41 by sacorder         ###   ########.fr       */
+/*   Created: 2024/04/05 01:19:45 by sacorder          #+#    #+#             */
+/*   Updated: 2024/04/05 01:22:19 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
 
-Ice::Ice(): AMateria("ice") { std::cout << "Default Ice cons\n"; }
+#pragma once
+# ifndef __MATERIA_SOURCE_H__
+#  define __MATERIA_SOURCE_H__
+#  include "IMateriaSource.hpp"
 
-Ice::Ice(const Ice &cp): AMateria("ice") { std::cout << "Copy Ice cons\n"; }
+class MateriaSource: public IMateriaSource {
+	private:
+		/* data */
+	public:
+		MateriaSource(/* args */);
+		~MateriaSource();
+};
 
-Ice::~Ice() { std::cout << "Default Ice des\n"; }
-
-Ice	&Ice::operator=(const Ice &cp) {
-	if (this == &cp)
-		return (*this);
-	return (*this);
-}
-
-AMateria*	Ice::clone() const {
-	return (new Ice(*this));
-}
+#endif
