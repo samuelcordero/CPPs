@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 01:19:45 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/05 01:22:19 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/05 12:35:53 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,15 @@
 
 class MateriaSource: public IMateriaSource {
 	private:
-		/* data */
+		AMateria	*known_materias[4];
 	public:
-		MateriaSource(/* args */);
+		MateriaSource();
+		MateriaSource(const MateriaSource &cp);
 		~MateriaSource();
+		MateriaSource	&operator=(const MateriaSource &cp);
+
+		virtual void		learnMateria(AMateria*) override;
+		virtual AMateria	*createMateria(std::string const & type) override;
 };
 
 #endif

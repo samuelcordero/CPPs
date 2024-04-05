@@ -6,12 +6,13 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:20:29 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/05 01:18:22 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/05 12:42:34 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
-#include "IMateriaSource.hpp"
+#include "MateriaSource.hpp"
+
 
 int main() {
 	IMateriaSource* src = new MateriaSource();

@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 00:51:02 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/05 01:03:41 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/05 12:47:54 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,8 @@ Ice	&Ice::operator=(const Ice &cp) {
 
 AMateria*	Ice::clone() const {
 	return (new Ice(*this));
+}
+
+void	Ice::use(ICharacter &target) {
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *\n";
 }
