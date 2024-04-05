@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 00:40:56 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/05 00:49:22 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/05 13:43:06 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,11 @@ AMateria::AMateria(std::string const &type) {
 }
 
 AMateria::~AMateria() { std::cout << "Default AMateria dest\n"; }
+
+std::string const	&AMateria::getType() const {
+	return (type);
+}
+
+void	AMateria::use(ICharacter &target) {
+	std::cout << "Default materia has no effect on " << target.getName() << std::endl;
+}

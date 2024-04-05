@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 15:28:04 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/20 15:29:40 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/05 13:40:01 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # ifndef __ICHARACTER_H__
 #  define __ICHARACTER_H__
 #  include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter {
 	public:

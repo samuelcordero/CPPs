@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:20:29 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/05 12:42:34 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/05 13:47:26 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ int main() {
 
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
+	std::cout << "Ice created from factory\n";
 	me->equip(tmp);
+	std::cout << "Ice equipped\n";
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 

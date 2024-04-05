@@ -6,15 +6,15 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 00:53:37 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/05 12:47:45 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/05 13:51:03 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure(): AMateria("Cure") { std::cout << "Default Cure cons\n"; }
+Cure::Cure(): AMateria("cure") { std::cout << "Default Cure cons\n"; }
 
-Cure::Cure(const Cure &cp): AMateria("Cure") { std::cout << "Copy Cure cons\n"; }
+Cure::Cure(const Cure &cp): AMateria(cp.getType()) { std::cout << "Copy Cure cons\n"; }
 
 Cure::~Cure() { std::cout << "Default Cure des\n"; }
 
