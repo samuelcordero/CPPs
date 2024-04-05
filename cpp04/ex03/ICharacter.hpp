@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 15:28:04 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/05 13:40:01 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/05 16:11:14 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class ICharacter {
 		virtual void				equip(AMateria* m) = 0;
 		virtual void				unequip(int idx) = 0;
 		virtual void				use(int idx, ICharacter& target) = 0;
+
+		virtual AMateria			*getEquip(int idx) const = 0;
 };
 
 #endif

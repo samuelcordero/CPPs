@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 01:19:57 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/05 14:04:09 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/05 15:45:35 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,10 @@ void	MateriaSource::learnMateria(AMateria *m) {
 	for (int i = 0; i < 4; ++i) {
 		if (known_materias[i] == NULL) {
 			known_materias[i] = m;
-			break ;
+			return ;
 		}
 	}
+	delete m;
 }
 
 AMateria	*MateriaSource::createMateria(std::string const &type) {
