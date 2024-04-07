@@ -6,16 +6,17 @@
 #    By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:08:31 by sacorder          #+#    #+#              #
-#    Updated: 2024/04/07 23:07:54 by sacorder         ###   ########.fr        #
+#    Updated: 2024/04/07 23:56:54 by sacorder         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = bureaucrat
+NAME = forms
 CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 LDFLAGS = -I .
 SRC =	main.cpp \
-		Bureaucrat.cpp
+		Bureaucrat.cpp \
+		Form.cpp
 OBJ = $(SRC:.cpp=.o)
 
 .PHONY: all clean fclean re
