@@ -6,23 +6,23 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 23:18:46 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/08 12:48:28 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/08 13:31:51 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
 
-AForm::AForm(): name("default Aform"), sign_grade(150), exec_grade(150) {
+AForm::AForm(): name("default Aform"), target("default target"), sign_grade(150), exec_grade(150) {
 	std::cout << "Default Aform cons\n";
 	is_signed = false;
 }
 
-AForm::AForm(const AForm &other): name(other.name), sign_grade(other.sign_grade), exec_grade(other.exec_grade) {
+AForm::AForm(const AForm &other): name(other.name), target(other.target), sign_grade(other.sign_grade), exec_grade(other.exec_grade) {
 	std::cout << "Copy Aform cons\n";
 	is_signed = other.is_signed;
 }
 
-AForm::AForm(const std::string name, const int sign_grade, const int exec_grade): name(name), sign_grade(sign_grade), exec_grade(exec_grade) {
+AForm::AForm(const std::string name, const std::string target, const int sign_grade, const int exec_grade): name(name), target(target), sign_grade(sign_grade), exec_grade(exec_grade) {
 	std::cout << "Param Aform cons\n";
 	if (sign_grade > 150 || exec_grade > 150)
 		throw GradeTooLowException();
@@ -40,6 +40,8 @@ AForm	&AForm::operator=(const AForm &other) {
 }
 
 const std::string	AForm::getName() const { return (name); }
+
+const std::string	AForm::getTarget() const { return (target); }
 
 bool	AForm::getSigned() const { return (is_signed); }
 

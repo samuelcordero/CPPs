@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 11:49:55 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/08 12:58:21 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/08 13:25:45 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class ShrubberyCreationForm: public AForm {
 	private:
 	public:
 		ShrubberyCreationForm();
-		ShrubberyCreationForm(const std::string name);
+		ShrubberyCreationForm(const std::string target);
 		ShrubberyCreationForm(const ShrubberyCreationForm &other);
 		virtual ~ShrubberyCreationForm();
 

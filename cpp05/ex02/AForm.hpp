@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 23:18:43 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/08 12:53:11 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/08 13:32:03 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,20 @@ class Bureaucrat;
 class AForm {	
 	private:
 		const std::string	name;
+		const std::string	target;
 		bool				is_signed;
 		const int			sign_grade;
 		const int			exec_grade;
 	public:
 		AForm();
 		AForm(const AForm &other);
-		AForm(const std::string name, const int sign_grade, const int exec_grade);
+		AForm(const std::string name, const std::string target, const int sign_grade, const int exec_grade);
 		virtual ~AForm();
 
 		AForm	&operator=(const AForm &other);
 
 		const std::string	getName() const;
+		const std::string	getTarget() const;
 		bool				getSigned() const;
 		int					getSignGrade() const;
 		int					getExecGrade() const;

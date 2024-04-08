@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 11:49:47 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/08 12:58:12 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/08 13:26:02 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class PresidentialPardonForm: public AForm {
 		/* data */
 	public:
 		PresidentialPardonForm();
-		PresidentialPardonForm(const std::string name);
+		PresidentialPardonForm(const std::string target);
 		PresidentialPardonForm(const PresidentialPardonForm &other);
 		virtual ~PresidentialPardonForm();
 

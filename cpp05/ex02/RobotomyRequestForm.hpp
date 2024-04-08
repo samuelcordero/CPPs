@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 11:49:53 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/08 12:56:43 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/08 13:25:53 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class RobotomyRequestForm: public AForm {
 		/* data */
 	public:
 		RobotomyRequestForm();
-		RobotomyRequestForm(const std::string name);
+		RobotomyRequestForm(const std::string target);
 		RobotomyRequestForm(const RobotomyRequestForm &other);
 		virtual ~RobotomyRequestForm();
 

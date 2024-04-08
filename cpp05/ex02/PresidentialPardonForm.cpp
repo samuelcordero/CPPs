@@ -6,21 +6,21 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 12:04:25 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/08 12:19:33 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/08 13:33:10 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(): AForm("default PresidentialPardonForm", 25, 5) {
+PresidentialPardonForm::PresidentialPardonForm(): AForm("PresidentialPardonForm", "default target", 25, 5) {
 	std::cout << "Default PresidentialPardonForm cons\n";
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const std::string name): AForm(name, 25, 5) {
+PresidentialPardonForm::PresidentialPardonForm(const std::string target): AForm("PresidentialPardonForm", target, 25, 5) {
 	std::cout << "Param PresidentialPardonForm cons\n";
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &other): AForm(other.getName(), 25, 5) {
+PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &other): AForm("PresidentialPardonForm", other.getTarget(),25, 5) {
 	std::cout << "Copy PresidentialPardonForm cons\n";
 }
 
@@ -28,7 +28,7 @@ PresidentialPardonForm::~PresidentialPardonForm() { std::cout << "PresidentialPa
 
 void	PresidentialPardonForm::execute(const Bureaucrat &b) const {
 	if (b.getGrade() <= this->getExecGrade() && this->getSigned()) {
-		std::cout << this->getName() << " has been pardoned by Zaphod Beeblebrox\n";
+		std::cout << this->getTarget() << " has been pardoned by Zaphod Beeblebrox\n";
 	}
 	else
 		throw GradeTooLowException();
