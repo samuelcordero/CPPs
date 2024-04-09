@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:46:57 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/09 12:01:40 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/10 00:21:04 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,8 @@ Animal::Animal(const Animal &cp) {
 Animal::~Animal() { std::cout << "Animal destructor\n"; }
 
 Animal	&Animal::operator=(const Animal &cp) {
-	if (&cp == this)
-		return (*this);
-	type = cp.type;
+	if (&cp != this)
+		type = cp.type;
 	return (*this);
 }
 

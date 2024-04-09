@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 12:32:51 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/09 13:11:12 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/10 00:16:11 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ Brain::~Brain() {
 }
 
 Brain	&Brain::operator=(const Brain &cp) {
-	if (this == &cp)
-		return (*this);
-	for (int i = 0; i < 100; ++i)
-		ideas[i] = cp.ideas[i];
+	if (this != &cp) {
+		for (int i = 0; i < 100; ++i)
+			ideas[i] = cp.ideas[i];
+	}
 	return (*this);
 }
 

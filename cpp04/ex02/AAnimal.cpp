@@ -25,14 +25,9 @@ AAnimal::AAnimal(const AAnimal &cp) {
 AAnimal::~AAnimal() { std::cout << "AAnimal destructor\n"; }
 
 AAnimal	&AAnimal::operator=(const AAnimal &cp) {
-	if (&cp == this)
-		return (*this);
-	type = cp.type;
+	if (&cp != this)
+		type = cp.type;
 	return (*this);
-}
-
-void	AAnimal::makeSound(void) {
-	std::cout << "Default jungle sounds\n";
 }
 
 void	AAnimal::printType(void) {

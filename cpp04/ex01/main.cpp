@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:46:49 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/09 12:07:53 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/10 00:22:57 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,9 @@ int	main(int argc, char **argv) {
 	
 	delete d;
 	delete d_cpy;
+
+	//Animal a;
+	//Animal *a_ptr = new AAnimal();
 
 	return (0);
 }

@@ -18,15 +18,15 @@
 class AAnimal {
 	protected:
 		std::string	type;
-		AAnimal();
-		AAnimal(const AAnimal &cp);
 	private:
 		/* private members */
 	public:
+		AAnimal();
+		AAnimal(const AAnimal &cp);
 		virtual ~AAnimal();
 		AAnimal	&operator=(const AAnimal &cp);
 
-		virtual void		makeSound(void);
+		virtual void		makeSound(void) = 0;
 		virtual void		printType(void);
 		virtual void		printMyBrain(void);
 		virtual void		think(int idx, const std::string idea);

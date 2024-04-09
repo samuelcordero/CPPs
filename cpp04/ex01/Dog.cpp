@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 12:00:07 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/09 13:11:47 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/10 00:22:23 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,11 @@ Dog::~Dog() {
 }
 
 Dog	&Dog::operator=(const Dog &cp) {
-	if (&cp == this)
-		return (*this);
-	br = new Brain(*cp.br);
-	type = cp.type;
+	if (&cp != this) {
+		delete br;
+		br = new Brain(*cp.br);
+		type = cp.type;
+	}
 	return (*this);
 }
 
