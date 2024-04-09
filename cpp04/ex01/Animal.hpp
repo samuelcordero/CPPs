@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:46:55 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/18 13:16:24 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/09 11:59:50 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class Animal {
 
 		virtual void		makeSound(void);
 		virtual void		printType(void);
+		virtual void		printMyBrain(void);
+		virtual void		think(int idx, const std::string idea);
 		virtual std::string	getType(void);
 };
 

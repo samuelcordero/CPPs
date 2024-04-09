@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:46:49 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/05 00:39:09 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/09 13:13:48 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,22 @@ int	main(int argc, char **argv) {
 
 	for (i = 0; i < arr_size; ++i) {
 		an_arr[i]->makeSound();
-		an_arr[i]->getType();
+		std::cout << "Type is " << an_arr[i]->getType() << std::endl;
 	}
 
 	for (i = 0; i < arr_size; ++i)
 		delete an_arr[i];
+
+	AAnimal *d = new Dog();
+	d->think(0, "mmmm");
+	d->think(1, "i want a bone");
+	d->printMyBrain();
+
+	AAnimal *d_cpy = new Dog(*(Dog *)d);
+	d_cpy->printMyBrain();
 	
+	delete d;
+	delete d_cpy;
+
 	return (0);
 }

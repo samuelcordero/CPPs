@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 11:57:47 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/18 12:44:40 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/09 12:02:16 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ class Cat: public Animal {
 		~Cat();
 		Cat	&operator=(const Cat &cp);
 
-		void	makeSound(void);
+		void	makeSound();
+		void	printMyBrain();
+		void	think(int idx, const std::string idea);
 };
 
 #endif

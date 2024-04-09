@@ -35,10 +35,6 @@ void	wrongAnimal::makeSound(void) {
 	std::cout << "Default jungle sounds\n";
 }
 
-void	wrongAnimal::printType(void) {
-	std::cout << "Type is " << type << std::endl;
-}
-
 std::string	wrongAnimal::getType(void) {
 	return (type);
 }

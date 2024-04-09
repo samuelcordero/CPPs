@@ -6,13 +6,13 @@
 #    By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:08:31 by sacorder          #+#    #+#              #
-#    Updated: 2024/04/05 00:36:53 by sacorder         ###   ########.fr        #
+#    Updated: 2024/04/09 13:07:48 by sacorder         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ideas
 CC = c++
-CPPFLAGS = -Wall -Wextra -Werror -O3 -std=c++98 -g3 #-fsanitize=address
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 #-g3 #-fsanitize=address
 LDFLAGS = -I .
 SRC =	main.cpp \
 		AAnimal.cpp \

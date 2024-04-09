@@ -39,6 +39,16 @@ void	AAnimal::printType(void) {
 	std::cout << "Type is " << type << std::endl;
 }
 
+void	AAnimal::printMyBrain(void) {
+	std::cout << "Default animal is brainless :(\n";
+}
+
+void	AAnimal::think(int idx, const std::string idea) {
+	(void)idx;
+	(void)idea;
+	std::cout << "Air sounds though an empty space\n";
+}
+
 std::string	AAnimal::getType(void) {
 	return (type);
 }

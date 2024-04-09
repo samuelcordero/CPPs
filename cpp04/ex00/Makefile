@@ -6,13 +6,13 @@
 #    By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:08:31 by sacorder          #+#    #+#              #
-#    Updated: 2024/03/18 12:54:50 by sacorder         ###   ########.fr        #
+#    Updated: 2024/04/09 11:40:10 by sacorder         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = polymorph
 CC = c++
-CPPFLAGS = -Wall -Wextra -Werror -O3 -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 LDFLAGS = -I .
 SRC =	main.cpp \
 		Animal.cpp \

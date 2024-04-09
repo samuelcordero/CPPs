@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:46:55 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/18 13:15:47 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/09 11:41:54 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ class Animal {
 		Animal	&operator=(const Animal &cp);
 
 		virtual void		makeSound(void);
-		virtual void		printType(void);
 		virtual std::string	getType(void);
 };
 

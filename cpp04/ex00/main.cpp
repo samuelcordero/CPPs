@@ -6,9 +6,11 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:46:49 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/20 15:16:22 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/09 11:44:10 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <iostream>
 
 #include "Animal.hpp"
 #include "Dog.hpp"
@@ -28,19 +30,19 @@ int	main(int argc, char **argv) {
 	Animal	*dog = new Dog();
 
 	cat->makeSound();
-	cat->printType();
+	std::cout << "Type is " << cat->getType() << std::endl;
 	dog->makeSound();
-	dog->printType();
+	std::cout << "Type is " << dog->getType() << std::endl;
 	
 	delete cat;
 	delete dog;
 
 	std::cout << "\nWrong animals tests:\n\n";
 
-	wrongCat	*wcat = new wrongCat();
+	wrongAnimal	*wcat = new wrongCat();
 
 	wcat->makeSound();
-	wcat->printType();
+	std::cout << "Type is " << wcat->getType() << std::endl;
 	
 	delete wcat;
 

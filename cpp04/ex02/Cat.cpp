@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 12:00:04 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/05 00:39:27 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/09 13:10:18 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,7 @@ Cat	&Cat::operator=(const Cat &cp) {
 void	Cat::makeSound(void) {
 	std::cout << "Miau miauu\n";
 }
+
+void	Cat::printMyBrain() { br->printBrain(); }
+
+void	Cat::think(int idx, const std::string idea) { br->setIdea(idx, idea); }

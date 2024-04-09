@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:46:57 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/18 12:13:24 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/09 11:43:02 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,6 @@ Animal	&Animal::operator=(const Animal &cp) {
 
 void	Animal::makeSound(void) {
 	std::cout << "Default jungle sounds\n";
-}
-
-void	Animal::printType(void) {
-	std::cout << "Type is " << type << std::endl;
 }
 
 std::string	Animal::getType(void) {

@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 12:00:07 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/05 00:39:37 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/09 13:11:43 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,7 @@ Dog	&Dog::operator=(const Dog &cp) {
 void	Dog::makeSound(void) {
 	std::cout << "Woof wooff\n";
 }
+
+void	Dog::printMyBrain() { br->printBrain(); }
+
+void	Dog::think(int idx, const std::string idea) { br->setIdea(idx, idea); }

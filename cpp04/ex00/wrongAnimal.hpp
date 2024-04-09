@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:46:55 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/18 12:18:29 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/09 11:42:16 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ class wrongAnimal {
 		wrongAnimal	&operator=(const wrongAnimal &cp);
 
 		void		makeSound(void);
-		void		printType(void);
 		std::string	getType(void);
 };
 

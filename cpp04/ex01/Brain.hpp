@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 12:32:49 by sacorder          #+#    #+#             */
-/*   Updated: 2024/03/18 12:37:17 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/09 12:01:55 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ class Brain {
 		Brain(const Brain &cp);
 		~Brain();
 		Brain	&operator=(const Brain &cp);
+
+		void	setIdea(int idx, const std::string idea);
+		void	printBrain();
 };
 
 #endif

@@ -28,6 +28,8 @@ class AAnimal {
 
 		virtual void		makeSound(void);
 		virtual void		printType(void);
+		virtual void		printMyBrain(void);
+		virtual void		think(int idx, const std::string idea);
 		virtual std::string	getType(void);
 };
 
