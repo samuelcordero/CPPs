@@ -10,12 +10,12 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = nwt
+NAME = identify
 CC = c++
-CPPFLAGS = -Wall -Wextra -Werror -O3 -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 LDFLAGS = -I .
 SRC =	main.cpp \
-		Fixed.cpp
+		ScalarConverter.cpp
 OBJ = $(SRC:.cpp=.o)
 
 .PHONY: all clean fclean re
