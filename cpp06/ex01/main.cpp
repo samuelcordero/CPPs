@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 15:26:34 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/24 12:31:56 by sacorder         ###   ########.fr       */
+/*   Created: 2024/04/24 12:36:24 by sacorder          #+#    #+#             */
+/*   Updated: 2024/04/24 12:48:44 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-# ifndef __SCALARCONVERTER_H__
-#  define __SCALARCONVERTER_H__
-#  include <iostream>
-#  include <cstdlib>
-#  include <climits>
+#include "Serializer.hpp"
+#include <iostream>
 
-typedef enum e_types { CHAR, INT, FLOAT, DOUBLE, UNKNOWN }	t_types;
+int	main() {
+	Data	d;
+	Data	*test;
+	uintptr_t	p;
 
-class ScalarConverter {
-	private:
-		/* data */
-	public:
-		virtual ~ScalarConverter() = 0;
-		static void		convert(const std::string lit);
-};
-
-#endif
+	d.an_integer = 32;
+	d.a_double = 42.2;
+	p = Serializer::serialize(&d);
+	test = Serializer::deserialize(p);
+	std::cout << "Output: " << test->an_integer << " " << test->a_double << std::endl;
+	return (0);
+}

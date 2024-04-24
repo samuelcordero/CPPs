@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 15:26:34 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/24 12:31:56 by sacorder         ###   ########.fr       */
+/*   Created: 2024/04/24 12:33:56 by sacorder          #+#    #+#             */
+/*   Updated: 2024/04/24 12:48:17 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-# ifndef __SCALARCONVERTER_H__
-#  define __SCALARCONVERTER_H__
-#  include <iostream>
-#  include <cstdlib>
-#  include <climits>
+#ifndef __SERIALIZER_H__
+# define __SERIALIZER_H__
+# include <string>
+# include <stdint.h>
 
-typedef enum e_types { CHAR, INT, FLOAT, DOUBLE, UNKNOWN }	t_types;
+typedef struct s_Data {
+	int 	an_integer;
+	double	a_double;
+}	Data;
 
-class ScalarConverter {
+class Serializer {
 	private:
 		/* data */
 	public:
-		virtual ~ScalarConverter() = 0;
-		static void		convert(const std::string lit);
+		virtual ~Serializer() = 0;
+		static uintptr_t serialize(Data* ptr);
+		static Data* deserialize(uintptr_t raw);
+
 };
 
 #endif

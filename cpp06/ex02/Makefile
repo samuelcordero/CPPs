@@ -6,16 +6,16 @@
 #    By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:08:31 by sacorder          #+#    #+#              #
-#    Updated: 2024/04/19 12:10:00 by sacorder         ###   ########.fr        #
+#    Updated: 2024/04/24 13:09:58 by sacorder         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = identify
 CC = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 LDFLAGS = -I .
 SRC =	main.cpp \
-		ScalarConverter.cpp
+		Base.cpp
 OBJ = $(SRC:.cpp=.o)
 
 .PHONY: all clean fclean re

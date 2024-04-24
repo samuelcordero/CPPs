@@ -6,7 +6,7 @@
 #    By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:08:31 by sacorder          #+#    #+#              #
-#    Updated: 2024/04/19 12:10:00 by sacorder         ###   ########.fr        #
+#    Updated: 2024/04/24 12:29:55 by sacorder         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 LDFLAGS = -I .
 SRC =	main.cpp \
-		ScalarConverter.cpp
+		Serializer.cpp
 OBJ = $(SRC:.cpp=.o)
 
 .PHONY: all clean fclean re
