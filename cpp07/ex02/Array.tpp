@@ -6,14 +6,15 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 11:42:44 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/25 11:56:11 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/04/25 12:28:01 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #ifndef __ARRAY_TPP__
-#	define __ARRAY_TPP__
+# define __ARRAY_TPP__
 
-#include "Array.hpp"
+# include "Array.hpp"
 
 
 
