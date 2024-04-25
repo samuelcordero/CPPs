@@ -6,11 +6,11 @@
 #    By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:08:31 by sacorder          #+#    #+#              #
-#    Updated: 2024/04/25 10:54:22 by sacorder         ###   ########.fr        #
+#    Updated: 2024/04/25 16:45:41 by sacorder         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = template
+NAME = mutant
 CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 LDFLAGS = -I .
