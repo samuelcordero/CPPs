@@ -6,16 +6,15 @@
 #    By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/04 17:08:31 by sacorder          #+#    #+#              #
-#    Updated: 2024/04/25 10:54:39 by sacorder         ###   ########.fr        #
+#    Updated: 2024/04/25 11:51:31 by sacorder         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = identify
+NAME = array
 CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 LDFLAGS = -I .
-SRC =	main.cpp \
-		Base.cpp
+SRC =	main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 .PHONY: all clean fclean re
