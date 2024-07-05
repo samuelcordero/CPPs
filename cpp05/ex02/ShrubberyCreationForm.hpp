@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 11:49:55 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/08 13:25:45 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/07/05 14:16:09 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,13 @@
 #  include "AForm.hpp"
 #  include <fstream>
 
-const std::string	shrub = "this is a test\nshrub ignore me\npls\n";
+const std::string	shrub = "         :::\n"
+"       :+:  \n"
+"     +:+ +:+\n"
+"   +#+ASCII  +:+ \n"
+" +#+#+TREE#+#+#+\n"
+"      #+#   \n"
+"     ###   \n";
 
 class ShrubberyCreationForm: public AForm {
 	private:

@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 22:21:29 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/07 23:16:43 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/07/05 14:04:22 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	main(void) {
 		}
 		std::cout << "-------- -------- -------- --------\n\n";
 	} {
-		std::cout << "-------- GRADE TOO HIGH LOW TEST --------\n";
+		std::cout << "-------- GRADE TOO LOW TEST --------\n";
 		try {
 			Bureaucrat another_test = Bureaucrat("Juan", 151);
 		}
