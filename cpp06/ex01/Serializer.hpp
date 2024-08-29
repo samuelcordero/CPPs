@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 12:33:56 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/24 12:48:17 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/08/29 16:23:03 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ typedef struct s_Data {
 
 class Serializer {
 	private:
-		/* data */
+		Serializer();
+		Serializer(const Serializer &);
+		Serializer &operator=(const Serializer &);
 	public:
-		virtual ~Serializer() = 0;
+		~Serializer();
 		static uintptr_t serialize(Data* ptr);
 		static Data* deserialize(uintptr_t raw);
 
