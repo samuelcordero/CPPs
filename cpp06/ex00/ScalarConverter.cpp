@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:27:43 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/24 12:28:01 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/08/29 15:42:43 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,7 +141,7 @@ static void	fromInt(const std::string lit) {
 }
 
 static void	fromFloat(const std::string lit) {
-	float d = strtof(lit.c_str(), NULL);
+	double d = strtod(lit.c_str(), NULL);
 	if (!lit.compare("nanf"))
 	{
 		std::cout << "char: impossible" << std::endl;

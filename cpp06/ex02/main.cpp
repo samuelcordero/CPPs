@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 12:56:08 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/24 13:09:15 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/08/29 15:39:24 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,22 @@ void	identify(Base* p) {
 
 void	identify(Base& p) {
 	try {
-		dynamic_cast<A&>(p);
+		A &a = dynamic_cast<A&>(p);
+		(void) a;
 		std::cout << "Object is of type A" << std::endl;
 	} catch(const std::exception &e) {
 		try {
-			dynamic_cast<B&>(p);
+			B &b = dynamic_cast<B&>(p);
+			(void) b;
 			std::cout << "Object is of type B" << std::endl;
 		} catch(const std::exception &e) {
-			std::cout << "Object is of type C" << std::endl;
+			try {
+				C &c = dynamic_cast<C&>(p);
+				(void) c;
+				std::cout << "Object is of type C" << std::endl;
+			} catch(const std::exception &e) {
+				std::cout << "Object is of UNKNOWN type" << std::endl;
+			}
 		}
 	}
 }
