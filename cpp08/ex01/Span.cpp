@@ -6,52 +6,44 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:46:05 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/25 13:18:55 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/08/30 19:09:23 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 
 Span::Span() {
-	size = 42;
 	ctr = 0;
-	arr = new int[size];
+	vector = new std::vector<int>(42);
 }
 
 Span::Span(const unsigned int N) {
-	size = N;
 	ctr = 0;
-	arr = new int[size];
+	vector = new std::vector<int>(N);
 }
 
 Span::Span(const Span &other) {
-	size = other.size;
-	ctr = other.ctr;
-	arr = new int[size];
-
-	for (unsigned int i = 0; i < size ; ++i)
-		arr[i] = other.arr[i];
+	*this = other;
 }
 
 Span::~Span() { delete[] arr; }
 
 Span	&Span::operator=(const Span &other) {
 	if (this != &other) {
-		delete[] arr;
-		size = other.size;
+		delete vector;
+		vector = new std::vector<int>(other.vector->size());
 		ctr = other.ctr;
-		arr = new int[size];
 
-		for (unsigned int i = 0; i < size ; ++i)
-			arr[i] = other.arr[i];
+		for (unsigned int i = 0; i < other.vector->size() ; ++i)
+			vector[i] = other.vector[i];
 	}
 	return (*this);
 }
 
 void	Span::addNumber(int n) {
-	if (ctr >= size)
+	if (ctr >= vector->size())
 		throw std::out_of_range("Index out of bounds");
-	arr[ctr] = n;
+	vector[ctr] = n;
 	++ctr;
 }
 
@@ -63,10 +55,10 @@ unsigned int	Span::shortestSpan() const {
 
 	for (unsigned int i = 0; i < ctr; ++i){
 		for (unsigned int j = i + 1; j < ctr; ++j) {
-			if (arr[j] > arr[i] && (unsigned int)(arr[j] - arr[i]) < span)
-				span = arr[j] - arr[i];
-			else if (arr[i] > arr[j] && (unsigned int)(arr[i] - arr[j]) < span)
-				span = arr[i] - arr[j];
+			if (vector.at(j) > vector[i] && (unsigned int)(vector.at(j) - vector[i]) < span)
+				span = vector.at(j) - vector[i];
+			else if (vector[i] > vector.at(j) && (unsigned int)(vector[i] - vector.at(j)) < span)
+				span = vector[i] - vector[j];
 		}
 	}
 	return (span);
@@ -80,7 +72,7 @@ unsigned int	Span::longestSpan() const {
 	int min = INT_MAX;
 	int max = INT_MIN;
 
-	for (unsigned int i = 0; i < ctr; ++i){
+	for (unsigned int i = 0; i < ctr; ++i) {
 		if (arr[i] < min)
 			min = arr[i];
 		if (arr[i] > max)
@@ -88,3 +80,5 @@ unsigned int	Span::longestSpan() const {
 	}
 	return (max - min);
 }
+
+void	Span::addManyNums() {}
