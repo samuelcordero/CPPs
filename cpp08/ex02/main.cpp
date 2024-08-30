@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 16:45:43 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/25 17:11:21 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/08/30 16:13:26 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	main() {
 	std::cout << "Top is: " << mstack.top() << std::endl;
 	mstack.pop();
 	std::cout << "Size after pop: " << mstack.size() << std::endl;
+	std::cout << "Top after pop: " << mstack.top() << std::endl;
 	mstack.push(3);
 	mstack.push(5);
 	mstack.push(737);

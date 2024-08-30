@@ -6,21 +6,25 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:46:07 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/25 13:19:49 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/08/30 16:12:02 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 #include <iostream>
+#include <stdlib.h>
+
+#define MAX_VAL 10000
 
 int	main() {
-	Span s(10);
-
-	s.addNumber(6);
-	s.addNumber(3);
-	s.addNumber(17);
-	s.addNumber(9);
-	s.addNumber(11);
+	Span s(10000);
+	srand(time(NULL));
+    for (int i = 0; i < MAX_VAL; i++)
+    {
+        const int value = rand();
+        s.addNumber(value);
+    }
+	
 
 	std::cout << "Shortest span: " << s.shortestSpan() << std::endl;
 	std::cout << "Longest span: " << s.longestSpan() << std::endl;

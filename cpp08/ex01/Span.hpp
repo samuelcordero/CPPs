@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:46:03 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/25 13:05:31 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/08/30 16:08:46 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ class Span {
 		unsigned int	shortestSpan() const;
 		unsigned int	longestSpan() const;
 
-		//TODO: add many numbers
 };
 
 #endif
