@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:46:03 by sacorder          #+#    #+#             */
-/*   Updated: 2024/08/30 19:04:14 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/08/31 12:32:06 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@
 # include <stdexcept>
 # include <limits.h>
 # include <vector>
+# include <iostream>
 
 class Span {
 	private:
-		int					*arr;
 		std::vector<int>	*vector;
 		unsigned int		ctr;
+		unsigned int		maxSize;
 	public:
 		Span();
 		Span(const unsigned int N);
@@ -33,7 +34,17 @@ class Span {
 		void			addNumber(int n);
 		unsigned int	shortestSpan() const;
 		unsigned int	longestSpan() const;
-		void			addManyNums();
+		void			print() const;
+
+		template<typename T>
+		void			addManyNums(T begin, T end) {
+			if (!vector)
+				throw std::out_of_range("Vector is NULL (size is 0)");
+			if (end - begin + ctr >= maxSize)
+				throw std::out_of_range("Not enough space");
+			vector->insert(vector->end(), begin, end);
+			ctr += end - begin;
+		}
 
 };
 
