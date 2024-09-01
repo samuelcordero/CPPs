@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:46:07 by sacorder          #+#    #+#             */
-/*   Updated: 2024/09/01 13:31:15 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/09/01 13:47:13 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main() {
 	srand(time(NULL));
 	for (int i = 0; i < MAX_VAL; i++)
 	{
-		const int value = rand() % MAX_VAL + 100;
+		const int value = rand();
 		v.push_back(value);
 	}
 	const std::vector<int> v_const = v;

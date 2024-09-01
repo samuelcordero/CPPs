@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:46:05 by sacorder          #+#    #+#             */
-/*   Updated: 2024/09/01 13:31:34 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/09/01 13:46:49 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,14 @@ unsigned int	Span::shortestSpan() const {
 	std::vector<int> sorted = *vector;
 	std::sort(sorted.begin(), sorted.end());
 
-	return (sorted[1] - sorted[0]);
+	int shortestSpan = sorted[1] - sorted[0];
+
+	for (unsigned long i = 0; i < sorted.size() - 1; ++i) {
+		if (sorted[i + 1] - sorted[i] < shortestSpan)
+			shortestSpan = sorted[i + 1] - sorted[i];
+	}
+
+	return (shortestSpan);
 }
 
 unsigned int	Span::longestSpan() const {
