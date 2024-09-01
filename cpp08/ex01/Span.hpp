@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:46:03 by sacorder          #+#    #+#             */
-/*   Updated: 2024/08/31 12:32:06 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/09/01 13:18:03 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <limits.h>
 # include <vector>
 # include <iostream>
+# include <algorithm>
 
 class Span {
 	private:

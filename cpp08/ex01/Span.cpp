@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:46:05 by sacorder          #+#    #+#             */
-/*   Updated: 2024/08/31 12:39:58 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/09/01 13:31:34 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,35 +59,21 @@ void	Span::addNumber(int n) {
 unsigned int	Span::shortestSpan() const {
 	if (ctr <= 1)
 		throw std::out_of_range("Not enough numbers");
+	
+	std::vector<int> sorted = *vector;
+	std::sort(sorted.begin(), sorted.end());
 
-	unsigned int span = UINT_MAX;
-
-	for (unsigned int i = 0; i < ctr; ++i){
-		for (unsigned int j = i + 1; j < ctr; ++j) {
-			if (vector->at(j) > vector->at(i) && (unsigned int)(vector->at(j) - vector->at(i)) < span)
-				span = vector->at(j) - vector->at(i);
-			else if (vector->at(i) >= vector->at(j) && (unsigned int)(vector->at(i) - vector->at(j)) < span)
-				span = vector->at(i) - vector->at(j);
-		}
-	}
-	return (span);
-
+	return (sorted[1] - sorted[0]);
 }
 
 unsigned int	Span::longestSpan() const {
 	if (ctr <= 1)
 		throw std::out_of_range("Not enough numbers");
+	
+	std::vector<int> sorted = *vector;
+	std::sort(sorted.begin(), sorted.end());
 
-	int min = INT_MAX;
-	int max = INT_MIN;
-
-	for (unsigned int i = 0; i < ctr; ++i) {
-		if (vector->at(i) < min)
-			min = vector->at(i);
-		if (vector->at(i) > max)
-			max = vector->at(i);
-	}
-	return (max - min);
+	return (sorted.back() - sorted.front());
 }
 
 void	Span::print() const {

@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:26:31 by sacorder          #+#    #+#             */
-/*   Updated: 2024/08/30 18:43:42 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/09/01 13:23:06 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,10 @@
 template<typename T>
 size_t	easyfind(const T &container, int find) {
 	typename T::const_iterator it;
-	for (it = container.begin(); it != container.end(); ++it) {
-		if (*it == find)
-			return it - container.begin();
-	}
-	throw std::invalid_argument("Couldn't find provided int");
+	it = std::find(container.begin(), container.end(), find);
+	if (it == container.end())
+		throw std::invalid_argument("Couldn't find provided int");
+	return std::distance(container.begin(), it); // this is due to lists an other conts that do not have random access iterators
 }
 
 #endif

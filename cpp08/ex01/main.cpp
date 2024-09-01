@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:46:07 by sacorder          #+#    #+#             */
-/*   Updated: 2024/08/31 12:42:53 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/09/01 13:31:15 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ int	main() {
 	srand(time(NULL));
 	for (int i = 0; i < MAX_VAL; i++)
 	{
-		const int value = rand();
+		const int value = rand() % MAX_VAL + 100;
 		v.push_back(value);
 	}
 	const std::vector<int> v_const = v;
 	s.addNumber(1);
-	s.addNumber(42);
+	s.addNumber(142);
 	s.addManyNums(v_const.begin(), v_const.end());
 
 	s.print();
