@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:46:07 by sacorder          #+#    #+#             */
-/*   Updated: 2024/09/01 13:47:13 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/09/01 13:52:35 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ int	main() {
 
 	std::cout << "Shortest span: " << s.shortestSpan() << std::endl;
 	std::cout << "Longest span: " << s.longestSpan() << std::endl;
+
+	Span empty;
 
 	return (0);
 }

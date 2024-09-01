@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 12:46:05 by sacorder          #+#    #+#             */
-/*   Updated: 2024/09/01 13:46:49 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/09/01 13:51:54 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Span::Span(const Span &other) {
 	*this = other;
 }
 
-Span::~Span() { delete vector; }
+Span::~Span() { if (vector) delete vector; }
 
 Span	&Span::operator=(const Span &other) {
 	if (this != &other) {
