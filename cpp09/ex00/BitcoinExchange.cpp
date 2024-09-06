@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 12:06:52 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/26 12:27:30 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/09/06 16:18:56 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,23 @@ void	BitcoinExchange::printConversion() {
 		std::cerr << "btc: error: couldn't load input file for db! is data.csv in the same dir as ./btc?" << std::endl; 
 		return ;
 	}
-	std::map<std::string, float> db;
+
+	std::map<std::string, float>	db;
+	std::string						tmp;
+
+	while (getline(db_in, tmp) && !db_in.fail()) {
+		if (tmp.find(',') == std::string::npos) {
+			std::cerr << "invalid data.csv file\n";
+			exit(1);
+		}
+		std::string	date, val_str;
+		double		value;
+		date = tmp.substr(0, tmp.find(','));
+		val_str = tmp.substr(tmp.find(',') + 1);
+		value = strtod(val_str.c_str(), NULL);
+		db[date] = value;
+	}
+	for (std::map<std::string, float>::iterator it = db.begin(); it != db.end(); ++it) {
+		std::cerr << "value at " << it->first << " is " << it->second << std::endl;
+	}
 }

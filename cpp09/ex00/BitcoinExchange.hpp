@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 11:55:41 by sacorder          #+#    #+#             */
-/*   Updated: 2024/04/26 12:27:02 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/09/06 16:05:07 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <fstream>
 # include <iostream>
 # include <map>
+# include <cstdlib>
 
 class BitcoinExchange {
 	private:

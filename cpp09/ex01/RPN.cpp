@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 12:29:16 by sacorder          #+#    #+#             */
-/*   Updated: 2024/09/05 15:46:52 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/09/06 15:16:26 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int		RPN::calculate(const std::string& opQuery) {
 	for (size_t i = 0; i < opQuery.length(); ++i) {
 		if (std::isdigit(opQuery[i])) {
 			stash.push(opQuery[i] - 48);
-		} else if (isOperator(opQuery[i])) {
+		} else if (isOperator(opQuery[i]) && stash.size() > 1) {
 			int op1, op2;
 			op2 = stash.top();
 			stash.pop();
@@ -63,6 +63,8 @@ int		RPN::calculate(const std::string& opQuery) {
 			} else if (opQuery[i] == '*') {
 				stash.push(op1 * op2);
 			}
+		} else if (isOperator(opQuery[i])) {
+			throw std::invalid_argument(opQuery);
 		}
 	}
 	if (stash.size() != 1) {
