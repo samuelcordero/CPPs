@@ -6,7 +6,7 @@
 /*   By: sacorder <sacorder@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 11:55:41 by sacorder          #+#    #+#             */
-/*   Updated: 2024/09/06 16:05:07 by sacorder         ###   ########.fr       */
+/*   Updated: 2024/09/07 16:02:04 by sacorder         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,9 @@ class BitcoinExchange {
 
 		void	printConversion();
 };
+
+std::string	trim(const std::string& str);
+bool		isLeapYear(int year);
+bool		isValidDate(const std::string &date);
 
 #endif
